@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Погода</title>
+</head>
+<body onLoad=startTime()>
+<div id="clock" class="weather-clock">
+</div>
+<div id="weather-icon">
+
+</div>
+<div class="weather-bottom">
+    <div class="weather-info">
+        <table width="100%">
+            <tr>
+                <td>Температура</td>
+                <td id="temp"></td>
+            </tr>
+            <tr>
+                <td>Влажность</td>
+                <td id="humidity"></td>
+            </tr>
+            <tr>
+                <td>Давление</td>
+                <td id="pressure"></td>
+            </tr>
+            <tr>
+                <td>Скорость ветра</td>
+                <td id="wind_speed"></td>
+            </tr>
+            <tr>
+                <td>Хмарность</td>
+                <td id="clouds"></td>
+            </tr>
+        </table>
+        <div>
+
+            <div id="city_name" class="weather-city">
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script charset="utf-8" src="actionbar.js"></script>
+        <script type="text/javascript" src="js/Toast.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+			getWeather();
+        </script>
+        <input type="button" onclick="getWeather()" value="Refresh the weather" style="width: 200px; height: 40px;"/>
+<!--
+        <input type="button" onclick="showLongTop('Weather is updated!!!')" value="show toast" style="width: 200px; height: 40px;"/>
+-->
+
+</body>
+</html>
